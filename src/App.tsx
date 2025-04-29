@@ -1,16 +1,15 @@
-import { useState } from 'react'
+import { Route, Routes } from "react-router"
+
+import LoginPage from "./pages/login"
+import HomePage from "./pages/home"
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  setCount(1);
-  console.log(count);
   return (
-    <>
-      <div>
-        <h3>Teste Frontend PL </h3>
-      </div>
-    </>
+    <Routes>
+      <Route index element={<HomePage />} />
+      <Route path="login" element={<LoginPage />} />
+    </Routes>
   )
 }
 

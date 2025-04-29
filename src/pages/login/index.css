@@ -1,0 +1,11 @@
+.login-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue-5);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
