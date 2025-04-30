@@ -1,7 +1,17 @@
+import { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import { Button } from '../../components/button';
 import './index.css';
+import { AppContext } from '../../context/AppContext';
 
 const HomePage = () => {
+  const { user } = useContext(AppContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) navigate('/login');
+  }, [user])
+
   return (
     <>
       <header className='page-header'>

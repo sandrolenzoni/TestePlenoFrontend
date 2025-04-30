@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "mock": "mockoon-cli start --data ./src/Mocks/mockoon-env.json --port 3001"
   },
   "dependencies": {
+    "@mockoon/cli": "^9.2.0",
     "clsx": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
