@@ -40,3 +40,11 @@
   font-weight: var(--font-regular);
   font-size: var(--font-size-xs);
 }
+
+.input-error-text {
+  color: var(--color-negative);
+  font-weight: var(--font-regular);
+  font-size: var(--font-size-xs);
+  width: 100%;
+
+}

@@ -3,32 +3,50 @@ import { Label } from "./label";
 
 import './style.css';
 
-type InputParams = Omit<React.ComponentProps<"input">, "className"> & {
+type InputParams = Omit<React.InputHTMLAttributes<HTMLInputElement>, "className"> & {
   label?: string;
   helptText?: string;
 }
 
-function Input({
-  type,
-  label,
-  helptText,
-  ...props
-}: InputParams) {
-  return (
-    <div className="input-root">
-      {label && <Label>
-        {label}
-      </Label>}
-      <div className="input-container">
-        <input
-          type={type}
-          data-slot="input"
-          className="input-content"
-          {...props}
-        />
-      </div>
-    </div>
-  )
-};
+type ErrorTextParams = Omit<React.InputHTMLAttributes<HTMLSpanElement>, "className"> & {}
 
-export { Input }
+
+
+const ErrorText = React.forwardRef<HTMLSpanElement, ErrorTextParams>(
+  ({ children, ...props }, ref) => {
+    return (
+      <span
+        ref={ref}
+        className="input-error-text"
+        {...props}
+      >
+        {children}
+      </span>
+    )
+  }
+)
+
+const Input = React.forwardRef<HTMLInputElement, InputParams>(
+  ({ label, helptText, ...props }, ref) => {
+    return (
+      <div className="input-root">
+        {label && <Label>
+          {label}
+        </Label>}
+        <div className="input-container">
+          <input
+            ref={ref}
+            data-slot="input"
+            className="input-content"
+            {...props}
+          />
+        </div>
+        {helptText && <Label>
+          {helptText}
+        </Label>}
+      </div>
+    )
+  }
+)
+
+export { Input, ErrorText }

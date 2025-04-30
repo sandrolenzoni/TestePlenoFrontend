@@ -9,3 +9,11 @@
   width: 100vw;
   overflow: hidden;
 }
+
+.error-login {
+  color: var(--color-negative);
+  font-size: var(--font-size-xs);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+}

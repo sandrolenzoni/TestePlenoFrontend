@@ -17,7 +17,7 @@
       "responses": [
         {
           "uuid": "e517e44e-eb16-42c2-ba2a-4018ab7ed7a4",
-          "body": "{\n  [\n  {\n    \"id\": 1,\n    \"nome\": \"João da Silva\",\n    \"email\": \"joao.silva@example.com\",\n    \"password\": \"123456\",\n    \"funcao\": \"Desenvolvedor Front-End\"\n  },\n  {\n    \"id\": 2,\n    \"nome\": \"Maria Oliveira\",\n    \"email\": \"maria.oliveira@example.com\",\n    \"password\": \"senhaSegura\",\n    \"funcao\": \"Desenvolvedora Back-End\"\n  },\n  {\n    \"id\": 3,\n    \"nome\": \"Carlos Pereira\",\n    \"email\": \"carlos.pereira@example.com\",\n    \"password\": \"abc123\",\n    \"funcao\": \"Engenheiro de Dados\"\n  }\n]\n}",
+          "body": "{\n  \"usuarios\":\n  [\n  {\n    \"id\": 1,\n    \"nome\": \"João da Silva\",\n    \"email\": \"joao.silva@example.com\",\n    \"password\": \"123456\",\n    \"funcao\": \"Desenvolvedor Front-End\"\n  },\n  {\n    \"id\": 2,\n    \"nome\": \"Maria Oliveira\",\n    \"email\": \"maria.oliveira@example.com\",\n    \"password\": \"senhaSegura\",\n    \"funcao\": \"Desenvolvedora Back-End\"\n  },\n  {\n    \"id\": 3,\n    \"nome\": \"Carlos Pereira\",\n    \"email\": \"carlos.pereira@example.com\",\n    \"password\": \"abc123\",\n    \"funcao\": \"Engenheiro de Dados\"\n  }\n]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
